@@ -14,7 +14,6 @@
       <div class="img-logo">
       <img src="https://i.gyazo.com/670bd6b5c25b7f028050b55252cb4233.png">
       </div>
-        
     <div>
     <h1 id="title">Better Developer Sign-In Form</h1>
     </div>
@@ -25,13 +24,13 @@
       
       <p id="description">Welcome and thank you for coming! Please sign-in and fill-out the fields below.</p><br>
        
-      <form action="/#"> <!--- <<< /URL-for-data submission --->
+      <form action="/#">
        <div id="survey-form">
          <div class="labels">
            <label id="name" for="name">* Name</label>
          </div>
-         <div class="right-side"> <!--- Created class to organize and rearrange the input boxes --->
-           <input type="text" name="name" id="name" class="input-field" placeholder=" Enter your full name" required><br> <!--- class="input-field" was made to adjust the input boxes/fields more specifically --->
+         <div class="right-side">
+           <input type="text" name="name" id="name" class="input-field" placeholder=" Enter your full name" required><br>
          </div>
          <div class="labels">
          <label id="nickname" for="nickname">Nickname</label>
@@ -61,77 +60,55 @@
            <label id="discover" for="discover">How did you discover Better Developer?</label>
          </div>
         <div class="right-side">
-          <ul style="list-style: none">
+          <ul style="list-style: none"> <!--- ul style="list-style:none" actually helps order the radio buttons and checkboxes (you'll see further down) in a column/linear fashion. Super useful when these input types won't go where you want them to --->
             <li class="radio"><label class="radio-text"><input name="radio-options" value="1" type="radio" class="radio-text">Social Media</label></li>
                <li class="radio"><label class="radio-text"><input name="radio-options" value="2" type="radio" class="radio-text">Friend</label></li>
                   <li class="radio"><label class="radio-text"><input name="radio-options" value="3" type="radio">Discord Invite</label></li>
           </ul>
          </div><br>
+           
          <div class="labels">
-           <label for="experience">What is your current level of coding?</label>
+           <label for="experience">* What is your current level of coding?</label>
          </div>
-           <!--- No idea why this dropdown box ends up on the right-side --->
-         <div class="row">
+ 
          <div class="right-side">
            <select id="dropdown" name="experience" class="dropdown">
-             <option  value>Select an option</option>
+             <!--- Was experiencing trouble with this earlier, because the drop down appeared on the left side with the labels class. Fixed it by adjusting the height and width (basically copied the input-field class, which seemed to fix it first.) --->
+             <option disabled value>Select an option</option>
+             <option value>Beginner</option>
+             <option value>Proficient</option>
+             <option value>Intermediate</option>
+             <option value>Expert</option>
+           </select>
+         </div>
+         
+         <div class="labels">
+           <label id="languages" for="languages">What languages are you interested in (or familiar with)?</label>
+         </div>
            
-           
-           
+         <div class="right-side">
+           <ul id="languages" style="list-style: none">
+             <li class="checkbox"><label class="checkbox-text"><input type="checkbox" name="languages" value="Java">Java</input></label></li>
+             <li class="checkbox"><label class="checkbox-text"><input type="checkbox" name="languages" value="C++">C++</input></label></li>
+             <li class="checkbox"><label class="checkbox-text"><input type="checkbox" name="languages" value="Python">Python</input></label></li>
+             <li class="checkbox"><label class="checkbox-text"><input type="checkbox" name="languages" value="Javascript">Javascript</input></label></li>
+             <li class="checkbox"><label class="checkbox-text"><input type="checkbox" name="languages" value="HTML">HTML</input></label></li>
+             <li class="checkbox"><label class="checkbox-text"><input type="checkbox" name="languages" value="CSS">CSS</input></label></li>
+             <li class="checkbox"><label class="checkbox-text"><input type="checkbox" name="languages" value="Other">Other <input id="other-text" class="checkbox-line" type="text"></input></input></label></li> <!--- please refer to css to reference the line after the 'other' checkbox --->
+            </ul>
+</div>
 
+<div class="labels"> 
+  <label id="text-area" for="text-area">Is there anything you'd like to tell us?</label>
+</div>
 
+<div class="right-side">
+  <!--- Introduction of textarea here. Helps for body of input text instead of 'input type="text"' --->
+  <textarea class="text-area" placeholder=" It could be anything, and I mean ANYTHING."></textarea><br>
+  
+  <button id="submit" type="submit" class="submit">Let's Go!</button>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</body>
 </html>
+
