@@ -52,6 +52,10 @@ h1 {
   margin: 0 auto;
 }
 
+/* for future reference the double colon refers to elements, 
+while single elements refer to classes. If you need a refresher, use this link https://www.w3schools.com/css/css_pseudo_elements.asp
+In the code below, the ::after inserts content after the content of timeline (think layers in photoshop)
+*/
 .timeline::after {
   content: '';
   position: absolute;
@@ -77,10 +81,11 @@ h1 {
   height: 25px;
   right: -17px;
   background-color: white;
-  border: 4px solid #FF9F55;
+  border: 4px solid #FF9F55; /* size - type of border - color */
   top: 15px;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 1; 
+/* z-index refers to the order that the elements go in */
 }
 
 .left {
